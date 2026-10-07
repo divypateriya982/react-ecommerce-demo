@@ -1,0 +1,313 @@
+{
+  "users": [
+    {
+      "fullName": "test",
+      "email": "test@test.com",
+      "password": "Asdf@1234",
+      "id": "GN8lLwZEgW0",
+      "isAdmin": true
+    },
+    {
+      "fullName": "johnd",
+      "email": "john@gmail.com",
+      "password": "Asdf@1234",
+      "isAdmin": false,
+      "id": "5XJEMkuc1UU"
+    },
+    {
+      "fullName": "peter",
+      "email": "peter@gmail.com",
+      "password": "Asdf@1234",
+      "isAdmin": false,
+      "id": "ovap1ApVmok"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara designed to create fuller, longer, and more dramatic-looking lashes. Its long-lasting formula provides impressive volume while remaining cruelty-free and suitable for everyday makeup routines.",
+      "category": "beauty",
+      "price": "2.5",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+    },
+    {
+      "id": "2",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror features a versatile collection of beautiful shades for creating different eye makeup looks. Its convenient built-in mirror makes application easier, especially when traveling, attending events, or getting ready away from home.",
+      "category": "beauty",
+      "price": "19.91",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+    },
+    {
+      "id": "3",
+      "title": "Powder Canister",
+      "description": "The Powder Canister contains finely milled setting powder designed to help set makeup, reduce unwanted shine, and create a smooth appearance. Its lightweight translucent formula provides a comfortable matte finish suitable for everyday makeup applications.",
+      "category": "beauty",
+      "price": 14.99,
+      "url": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"
+    },
+    {
+      "id": "4",
+      "title": "Red Lipstick",
+      "description": "The Red Lipstick delivers a bold and classic red color that instantly enhances your overall makeup look. Its creamy, highly pigmented formula glides smoothly across the lips while providing vibrant color and a long-lasting finish.",
+      "category": "beauty",
+      "price": 12.99,
+      "url": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"
+    },
+    {
+      "id": "5",
+      "title": "Red Nail Polish",
+      "description": "The Red Nail Polish provides a rich, glossy red shade that gives your nails a polished and vibrant appearance. Its quick-drying formula makes application convenient while creating a salon-inspired finish suitable for everyday wear or special occasions.",
+      "category": "beauty",
+      "price": 8.99,
+      "url": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"
+    },
+    {
+      "id": "6",
+      "title": "Calvin Klein CK One",
+      "description": "CK One by Calvin Klein is a classic unisex fragrance featuring a fresh, clean, and versatile scent. Its balanced character makes it suitable for everyday use, whether you are heading to work, meeting friends, or enjoying a casual occasion.",
+      "category": "fragrances",
+      "price": "49.99",
+      "url": "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp"
+    },
+    {
+      "id": "7",
+      "title": "Chanel Coco Noir Eau De",
+      "description": "Coco Noir by Chanel is an elegant and mysterious fragrance combining distinctive notes of grapefruit, rose, and sandalwood. Its sophisticated character makes it especially suitable for evening occasions, adding a refined and memorable touch to your overall presence.",
+      "category": "fragrances",
+      "price": 129.99,
+      "url": "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp"
+    },
+    {
+      "id": "8",
+      "title": "Dior J'adore",
+      "description": "J'adore by Dior is a luxurious floral fragrance known for its elegant blend of ylang-ylang, rose, and jasmine. Its sophisticated and feminine character creates a graceful scent suitable for special occasions, evening events, or whenever you want a refined fragrance.",
+      "category": "fragrances",
+      "price": "89.92",
+      "url": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp"
+    },
+    {
+      "id": "9",
+      "title": "Dolce Shine Eau de",
+      "description": "Dolce Shine by Dolce & Gabbana is a vibrant and youthful fragrance featuring appealing notes of mango, jasmine, and blonde woods. Its bright and joyful character makes it a refreshing choice for everyday wear, casual outings, and cheerful occasions.",
+      "category": "fragrances",
+      "price": 69.99,
+      "url": "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp"
+    },
+    {
+      "id": "10",
+      "title": "Gucci Bloom Eau de",
+      "description": "Gucci Bloom by Gucci is a captivating floral fragrance featuring distinctive notes of tuberose, jasmine, and Rangoon creeper. Its romantic and modern character creates an elegant scent suitable for everyday wear, social occasions, evenings, or moments when you want a sophisticated fragrance.",
+      "category": "fragrances",
+      "price": 79.99,
+      "url": "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp"
+    },
+    {
+      "id": "11",
+      "title": "Annibale Colombo Bed",
+      "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame designed to enhance the appearance and comfort of a bedroom. Crafted with high-quality materials, it combines sophisticated styling with a comfortable structure for creating a refined sleeping environment.",
+      "category": "furniture",
+      "price": 1899.99,
+      "url": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp"
+    },
+    {
+      "id": "12",
+      "title": "Annibale Colombo Sofa",
+      "description": "The Annibale Colombo Sofa is a sophisticated seating option designed to bring comfort and elegance to your living room. Its premium upholstery and exquisite design create a stylish centerpiece that works well for relaxing, entertaining guests, or enjoying everyday family time.",
+      "category": "furniture",
+      "price": 2499.99,
+      "url": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp"
+    },
+    {
+      "id": "13",
+      "title": "Bedside Table African Cherry",
+      "description": "The Bedside Table in African Cherry is a stylish and practical bedroom addition that provides convenient storage beside your bed. Its elegant appearance complements different bedroom interiors while offering a useful surface for keeping personal belongings, books, lamps, or everyday essentials nearby.",
+      "category": "furniture",
+      "price": 299.99,
+      "url": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp"
+    },
+    {
+      "id": "14",
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "description": "The Knoll Saarinen Executive Conference Chair combines modern styling with ergonomic comfort, making it suitable for offices, meeting rooms, and conference spaces. Its timeless design provides a professional appearance while offering comfortable seating for meetings, discussions, and extended work sessions.",
+      "category": "furniture",
+      "price": 499.99,
+      "url": "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp"
+    },
+    {
+      "id": "15",
+      "title": "Wooden Bathroom Sink With Mirror",
+      "description": "The Wooden Bathroom Sink with Mirror is a distinctive and stylish bathroom addition featuring a wooden countertop and matching mirror. Its coordinated design creates an elegant appearance while providing a practical sink area and reflective surface for everyday bathroom routines and grooming.",
+      "category": "furniture",
+      "price": 799.99,
+      "url": "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp"
+    },
+    {
+      "id": "16",
+      "title": "Apple",
+      "description": "Fresh and crisp apples are a versatile fruit suitable for convenient snacking, breakfast, or incorporating into different recipes. Their naturally refreshing taste makes them enjoyable on their own, while their texture also works well in salads, desserts, smoothies, and other dishes.",
+      "category": "groceries",
+      "price": 1.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/apple/1.webp"
+    },
+    {
+      "id": "17",
+      "title": "Beef Steak",
+      "description": "High-quality beef steak is a versatile ingredient suitable for grilling, pan-searing, roasting, or preparing according to your preferred level of doneness. Its rich flavor makes it an excellent choice for satisfying meals, whether served with vegetables, potatoes, sauces, or other favorite sides.",
+      "category": "groceries",
+      "price": 12.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/beef-steak/1.webp"
+    },
+    {
+      "id": "18",
+      "title": "Cat Food",
+      "description": "Nutritious cat food is specially formulated to support the dietary needs of feline companions. It provides a convenient feeding option for cat owners and can be incorporated into regular mealtimes as part of a balanced feeding routine for keeping pets properly nourished.",
+      "category": "groceries",
+      "price": 8.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/cat-food/1.webp"
+    },
+    {
+      "id": "19",
+      "title": "Chicken Meat",
+      "description": "Fresh and tender chicken meat is a versatile ingredient suitable for preparing a wide variety of delicious meals. It can be grilled, baked, roasted, fried, or cooked with vegetables, sauces, spices, and other ingredients to create convenient everyday dishes for different preferences.",
+      "category": "groceries",
+      "price": 9.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/1.webp"
+    },
+    {
+      "id": "20",
+      "title": "Cooking Oil",
+      "description": "Versatile cooking oil is suitable for a wide range of culinary applications, including frying, sautéing, roasting, and everyday cooking. Its practical nature makes it a useful kitchen essential for preparing vegetables, meats, snacks, and numerous homemade recipes with convenient cooking performance.",
+      "category": "groceries",
+      "price": 4.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/1.webp"
+    },
+    {
+      "id": "21",
+      "title": "Cucumber",
+      "description": "Fresh and crisp cucumbers are a refreshing and hydrating ingredient suitable for salads, snacks, sandwiches, or serving as a light side dish. Their clean flavor and crunchy texture make them easy to incorporate into everyday meals, healthy recipes, and refreshing food combinations.",
+      "category": "groceries",
+      "price": 1.49,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/cucumber/1.webp"
+    },
+    {
+      "id": "22",
+      "title": "Dog Food",
+      "description": "Specially formulated dog food provides essential nutrients designed to support the dietary needs of canine companions. It offers a convenient feeding solution for pet owners and can be included as part of a regular feeding routine to help provide dogs with appropriate everyday nourishment.",
+      "category": "groceries",
+      "price": 10.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/dog-food/1.webp"
+    },
+    {
+      "id": "23",
+      "title": "Eggs",
+      "description": "Fresh eggs are a versatile kitchen ingredient suitable for breakfast, baking, cooking, and numerous homemade recipes. They can be scrambled, fried, boiled, baked, or combined with other ingredients, making them a practical staple for preparing a wide variety of everyday meals.",
+      "category": "groceries",
+      "price": 2.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/eggs/1.webp"
+    },
+    {
+      "id": "24",
+      "title": "Fish Steak",
+      "description": "Quality fish steak is a versatile seafood ingredient suitable for grilling, baking, pan-searing, or preparing with different seasonings and sauces. Its convenient form makes it easy to incorporate into satisfying meals alongside vegetables, rice, potatoes, salads, or other preferred side dishes.",
+      "category": "groceries",
+      "price": 14.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/fish-steak/1.webp"
+    },
+    {
+      "id": "25",
+      "title": "Green Bell Pepper",
+      "description": "Fresh and vibrant green bell peppers add color, crisp texture, and distinctive flavor to a variety of dishes. They are suitable for salads, stir-fries, sandwiches, pizzas, stuffed recipes, and cooked meals, making them a practical and versatile ingredient for everyday cooking.",
+      "category": "groceries",
+      "price": 1.29,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/1.webp"
+    },
+    {
+      "id": "26",
+      "title": "Green Chili Pepper",
+      "description": "Spicy green chili peppers are ideal for adding noticeable heat and flavor to a wide variety of recipes. They can be chopped, sliced, cooked, or used as a garnish in curries, sauces, stir-fries, snacks, and other dishes according to personal taste preferences.",
+      "category": "groceries",
+      "price": 0.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/1.webp"
+    },
+    {
+      "id": "27",
+      "title": "Honey Jar",
+      "description": "Pure and natural honey comes in a convenient jar, making it easy to use for sweetening beverages, spreading over foods, or drizzling onto favorite dishes. Its naturally sweet flavor makes it a versatile ingredient for breakfast, desserts, snacks, and everyday recipes.",
+      "category": "groceries",
+      "price": 6.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/honey-jar/1.webp"
+    },
+    {
+      "id": "28",
+      "title": "Ice Cream",
+      "description": "Creamy and delicious ice cream is a delightful treat available in various flavors to suit different preferences. Its smooth texture and sweet taste make it suitable for enjoying as a refreshing dessert, after-meal treat, snack, or enjoyable addition to other desserts.",
+      "category": "groceries",
+      "price": 5.49,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/ice-cream/1.webp"
+    },
+    {
+      "id": "29",
+      "title": "Juice",
+      "description": "Refreshing fruit juice offers a flavorful beverage option that can complement breakfast, meals, snacks, or relaxing moments throughout the day. Its fruity taste makes it enjoyable served chilled and provides a convenient way to include a refreshing drink in your daily routine.",
+      "category": "groceries",
+      "price": 3.99,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/juice/1.webp"
+    },
+    {
+      "id": "30",
+      "title": "Kiwi",
+      "description": "Nutrient-rich kiwi is a flavorful fruit that works well as a convenient snack or ingredient in different dishes. Its distinctive taste and refreshing texture make it suitable for fruit salads, smoothies, desserts, breakfast bowls, and recipes that benefit from a tropical-inspired flavor.",
+      "category": "groceries",
+      "price": 2.49,
+      "url": "https://cdn.dummyjson.com/product-images/groceries/kiwi/1.webp"
+    },
+    {
+      "url": "https://i.pinimg.com/736x/4d/b9/8f/4db98f675ec9dd331172477796aa9782.jpg",
+      "title": "Motivation",
+      "price": "88.8",
+      "description": "sdsdc sdfsf sdf sdf sd fs df sdf s df sdf sd fs df sdf sd f sdf sd fs df s fs df sdf sd f sdf",
+      "category": "furniture",
+      "id": "5y9hQ7kY2mA"
+    },
+    {
+      "url": "https://i.pinimg.com/736x/4d/b9/8f/4db98f675ec9dd331172477796aa9782.jpg",
+      "title": "jbhbh",
+      "price": "88.88",
+      "description": "dfsdf d dfdf fd df dfv df fvdfv df vdf v dfv df vd fv dfv df vdf v dfv vfdv df df d f df v",
+      "category": "electronics",
+      "id": "reoITkTJUrA"
+    }
+  ],
+  "carts": [
+    {
+      "userId": "ovap1ApVmok",
+      "productId": "2",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp",
+      "title": "Eyeshadow Palette with Mirror",
+      "price": "19.91",
+      "quantity": 1,
+      "id": "Eduycuhr4rY"
+    },
+    {
+      "userId": "ovap1ApVmok",
+      "productId": "1",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp",
+      "title": "Essence Mascara Lash Princess",
+      "price": "2.5",
+      "quantity": 1,
+      "id": "QMszxFdhVg0"
+    },
+    {
+      "userId": "5XJEMkuc1UU",
+      "productId": "2",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp",
+      "title": "Eyeshadow Palette with Mirror",
+      "price": "19.91",
+      "quantity": 1,
+      "id": "R_Tq4F3dz-o"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

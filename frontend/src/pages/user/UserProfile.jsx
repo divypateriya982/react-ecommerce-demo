@@ -1,15 +1,14 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { asyncDeleteUser, asyncLogoutUser, asyncUpdateUser } from '../../store/actions/userActions';
 import { removeCart } from '../../store/reducers/cartSlice';
 
 const UserProfile = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const user = JSON.parse(localStorage.getItem('user')); // user can also get from state through useSelector.
-    const id = user?.id;
-    const isAdmin = user?.isAdmin;
+    const user = useSelector((state) => state.userReducer.user);
+    const { id, isAdmin } = user;
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         defaultValues: {
             fullName: user?.fullName,
@@ -21,8 +20,8 @@ const UserProfile = () => {
         <div className="min-h-screen bg-slate-400 pt-25 pb-6 flex flex-col items-center justify-center">
             <form onSubmit={handleSubmit((user) => {
                 user.id = id,
-                user.isAdmin = isAdmin,
-                dispatch(asyncUpdateUser(user, id));
+                    user.isAdmin = isAdmin,
+                    dispatch(asyncUpdateUser(user, id));
                 navigate('/');
                 reset();
             })} className="w-[85%] min-[480px]:max-[640px]:w-[65%] sm:w-[50%] md:w-[40%] lg:w-[30%] bg-white px-6 py-5 rounded-2xl text-sm shadow-xl md:shadow-2xl">

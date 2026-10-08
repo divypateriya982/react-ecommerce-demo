@@ -12,7 +12,6 @@ const Login = () => {
             <form onSubmit={handleSubmit((user) => {
                 dispatch(asyncLoginUser(user));
                 reset();
-                navigate('/');
             })} className="w-[85%] min-[480px]:max-[640px]:w-[65%] sm:w-[50%] md:w-[40%] lg:w-[30%] bg-white px-6 py-5 rounded-2xl text-sm shadow-xl md:shadow-2xl">
                 <h1 className="text-center text-lg font-medium">Welcome Back!</h1>
                 <p className="text-[#8B96A0] text-center">We missed you! Please enter your details.</p>

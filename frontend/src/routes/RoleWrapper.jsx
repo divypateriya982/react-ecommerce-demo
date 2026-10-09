@@ -5,7 +5,7 @@ const RoleWrapper = ({ role, children }) => {
     const user = useSelector((state) => state.userReducer.user);
 
     if (!user) {
-        <Navigate to={'/login'} replace />
+        return <Navigate to={'/login'} replace />
     }
 
     const hasRequiredRole = role === 'admin' ? (

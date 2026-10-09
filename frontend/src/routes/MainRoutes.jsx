@@ -10,10 +10,8 @@ import Cart from '../pages/Cart';
 import AuthWrapper from './AuthWrapper';
 import UnauthWrapper from './UnauthWrapper';
 import RoleWrapper from './RoleWrapper';
-import { useSelector } from 'react-redux';
 
 const MainRoutes = () => {
-    const user = useSelector((state) => state.userReducer.user);
     return (
         <Routes>
             <Route path='/' element={<Products />} />

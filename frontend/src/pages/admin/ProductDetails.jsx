@@ -149,7 +149,7 @@ const ProductDetails = () => {
                             </form>
                         </div>
                         <button onClick={async () => {
-                            await dispatch(asyncDeleteProduct(id));
+                            await dispatch(asyncDeleteProduct(id, currentPage));
                             navigate('/');
                         }} className=" bg-red-600/70 py-1 lg:py-2 rounded-full font-medium px-10"><i className="ri-delete-bin-6-line mr-4"></i>Delete This Product</button>
                     </div>

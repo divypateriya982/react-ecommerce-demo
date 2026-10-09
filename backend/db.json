@@ -262,22 +262,6 @@
       "category": "groceries",
       "price": 2.49,
       "url": "https://cdn.dummyjson.com/product-images/groceries/kiwi/1.webp"
-    },
-    {
-      "url": "https://i.pinimg.com/736x/4d/b9/8f/4db98f675ec9dd331172477796aa9782.jpg",
-      "title": "Motivation",
-      "price": "88.8",
-      "description": "sdsdc sdfsf sdf sdf sd fs df sdf s df sdf sd fs df sdf sd f sdf sd fs df s fs df sdf sd f sdf",
-      "category": "furniture",
-      "id": "5y9hQ7kY2mA"
-    },
-    {
-      "url": "https://i.pinimg.com/736x/4d/b9/8f/4db98f675ec9dd331172477796aa9782.jpg",
-      "title": "jbhbh",
-      "price": "88.89",
-      "description": "dfsdf d dfdf fd df dfv df fvdfv df vdf v dfv df vd fv dfv df vdf v dfv vfdv df df d f df v",
-      "category": "electronics",
-      "id": "reoITkTJUrA"
     }
   ],
   "carts": [

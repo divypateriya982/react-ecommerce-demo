@@ -1,21 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { asyncDeleteProduct, asyncUpdateProduct } from "../../store/actions/productActions";
 import { asyncCreateCart, asyncDeleteCart } from "../../store/actions/cartActions";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "../../api/axiosConfig";
 
 const ProductDetails = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const location = useLocation();
 
     const { id } = useParams();
     const user = useSelector((state) => state.userReducer.user);
-    // const { products, currentPage } = useSelector((state) => state.productReducer);
-    // const product = products?.find((product) => product.id === id);
-    const { product, currentPage } = location.state;
-
+    const currentPage = useSelector((state) => state.productReducer.currentPage);
+    const [product, setProduct] = useState(null);
+    const fetchProduct = async () => {
+        const { data } = await axios.get(`/products/${id}`);
+        setProduct(data);
+    }
+    useEffect(() => {
+        fetchProduct();
+    }, []);
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {

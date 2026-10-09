@@ -19,9 +19,7 @@ const Products = () => {
         const cart = carts.find((cart) => cart.productId === product.id && cart.userId === user?.id);
         return (
             <div onClick={() => {
-                if (user) navigate(`/product/${product.id}`, {
-                    state: { product, currentPage }
-                });
+                if (user) navigate(`/product/${product.id}`);
                 else {
                     toast.error('Please login first');
                     navigate('/login');

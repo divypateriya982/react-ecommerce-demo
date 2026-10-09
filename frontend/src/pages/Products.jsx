@@ -39,7 +39,7 @@ const Products = () => {
                     ) : (
                         <button className="bg-[#F07E5A] rounded-full px-6 py-2 cursor-pointer text-[#482416] hover:bg-[#dd633d] active:scale-[0.96] font-medium transition duration-200"><i className="ri-shopping-cart-2-line mr-4"></i>Add to cart</button>
                     )) : (
-                        !user.isAdmin ? (
+                        !user?.isAdmin ? (
                             <button onClick={(event) => {
                                 event.stopPropagation();
                                 if (user) {

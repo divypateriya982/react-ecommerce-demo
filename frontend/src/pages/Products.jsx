@@ -84,7 +84,7 @@ const Products = () => {
                 </div>
             ) : (
                 <div className="bg-[#FEE3C8] h-screen flex justify-center items-end">
-                    <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">Loading...</p>
+                    <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">No products!</p>
                     <div className="flex justify-center items-center gap-6 py-5 text-blue-800/70 font-medium">
                         <button onClick={() => {
                             if (currentPage !== 1) {

@@ -13,9 +13,12 @@ const productSlice = createSlice({
             if (products !== undefined) state.products = products;
             if (totalPages !== undefined) state.totalPages = totalPages;
             if (currentPage !== undefined) state.currentPage = currentPage;
+        },
+        resetCurrentPage: (state) => {
+            state.currentPage = 1
         }
     }
 });
 
-export const { loadProduct } = productSlice.actions
+export const { loadProduct, resetCurrentPage } = productSlice.actions
 export default productSlice.reducer

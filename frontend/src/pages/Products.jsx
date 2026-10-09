@@ -69,6 +69,7 @@ const Products = () => {
             {products.length > 0 ? (
                 <div className="min-h-screen bg-[#FEE3C8]">
                     <div className="pt-25 px-6 py-4 grid gap-6 sm:grid-cols-2 min-[430px]:max-[500px]:px-10 min-[500px]:max-[640px]:px-20 min-[500px]:max-[640px]:gap-7 sm:px-6 md:px-15 md:gap-10 lg:grid-cols-3 lg:px-8 lg:gap-5 xl:grid-cols-4 xl:px-8 xl:gap-8">{renderProducts}</div>
+
                     <div className="flex justify-center items-center gap-6 py-5 text-blue-800/70 font-medium">
                         <button onClick={() => {
                             if (currentPage !== 1) {
@@ -82,10 +83,22 @@ const Products = () => {
                     </div>
                 </div>
             ) : (
-                <div className="bg-[#FEE3C8] h-screen">
+                <div className="bg-[#FEE3C8] h-screen flex justify-center items-end">
                     <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">Loading...</p>
+                    <div className="flex justify-center items-center gap-6 py-5 text-blue-800/70 font-medium">
+                        <button onClick={() => {
+                            if (currentPage !== 1) {
+                                dispatch(loadProduct({ currentPage: currentPage - 1 }))
+                            }
+                        }} className="hover:underline cursor-pointer">Prev.</button>
+                        {renderPages}
+                        <button onClick={() => {
+                            if (currentPage < totalPages) dispatch(loadProduct({ currentPage: currentPage + 1 }));
+                        }} className="hover:underline cursor-pointer">Next</button>
+                    </div>
                 </div>
             )}
+
         </>
     )
 }

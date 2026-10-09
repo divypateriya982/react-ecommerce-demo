@@ -38,7 +38,13 @@ export const asyncUpdateProduct = (product, id, currentPage) => async (dispatch)
 export const asyncDeleteProduct = (id, currentPage) => async (dispatch) => {
     try {
         await axios.delete("/products/" + id);
-        await dispatch(asyncLoadProduct(currentPage));
+
+        const { data: pagination } = await axios.get('/products?_page=1&_per_page=8');
+        const lastPage = pagination.pages;
+        
+        if (lastPage === 0) await dispatch(asyncLoadProduct(1));
+        else if (currentPage > lastPage) await dispatch(asyncLoadProduct(lastPage));
+        else await dispatch(asyncLoadProduct(currentPage));
         toast.error("Product deleted successfully");
     } catch (error) {
         console.error(error);

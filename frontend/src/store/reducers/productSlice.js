@@ -4,7 +4,7 @@ const productSlice = createSlice({
     name: 'product',
     initialState: {
         products: [],
-        totalPages: null,
+        totalPages: 0,
         currentPage: 1
     },
     reducers: {

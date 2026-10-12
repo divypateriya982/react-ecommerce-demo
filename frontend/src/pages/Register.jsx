@@ -3,8 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { asyncRegisterUser } from '../store/actions/userActions';
 
 const Register = () => {
+    
     const navigate = useNavigate();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+    console.log('Register rendering...');
     return (
         <div className="w-screen h-screen flex items-center justify-center bg-linear-to-r from-[#77C3FD] via-[#6D7CFD] to-[#B3AAFC]">
             <form onSubmit={handleSubmit((user) => {

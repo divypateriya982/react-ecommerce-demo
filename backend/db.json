@@ -28,7 +28,7 @@
       "title": "Essence Mascara Lash Princess",
       "description": "The Essence Mascara Lash Princess is a popular mascara designed to create fuller, longer, and more dramatic-looking lashes. Its long-lasting formula provides impressive volume while remaining cruelty-free and suitable for everyday makeup routines.",
       "category": "beauty",
-      "price": "2.5",
+      "price": "2.4",
       "url": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
     },
     {
@@ -301,12 +301,12 @@
     },
     {
       "userId": "5XJEMkuc1UU",
-      "productId": "2",
-      "url": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp",
-      "title": "Eyeshadow Palette with Mirror",
-      "price": "19.91",
+      "productId": "1",
+      "url": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp",
+      "title": "Essence Mascara Lash Princess",
+      "price": "2.4",
       "quantity": 1,
-      "id": "R_Tq4F3dz-o"
+      "id": "XWs-Rb80wEs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

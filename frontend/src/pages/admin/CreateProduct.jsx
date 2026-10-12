@@ -8,6 +8,7 @@ const CreateProduct = () => {
     const dispatch = useDispatch();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     
+    console.log('CreateProduct rendering...');
     return (
         <div className='min-h-screen bg-amber-50'>
             <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] min-[480px]:max-[640px]:w-[65%] sm:w-[50%] md:w-[40%] lg:w-[30%] bg-black/40 px-6 py-5 rounded-2xl text-sm shadow-xl md:shadow-2xl">

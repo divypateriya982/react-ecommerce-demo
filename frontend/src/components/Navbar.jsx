@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const user = useSelector((state) => state.userReducer.user);
+
+    console.log('Navbar rendering...')
     return (
         <div className="py-5 flex justify-center space-x-5 text-lg fixed z-50 top-0 left-0 right-0 border-b border-gray-200/80 bg-white/60 shadow-sm backdrop-blur-md">
             <NavLink to={'/'} className={({ isActive }) => isActive ? 'text-pink-400' : ''}>Home</NavLink>

@@ -1,12 +1,14 @@
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { asyncLoginUser } from '../store/actions/userActions';
 import { useDispatch } from 'react-redux';
 
 const Login = () => {
+
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const { handleSubmit, reset, register, formState: { errors } } = useForm();
+
+    console.log('Login rendering...')
     return (
         <div className="w-screen h-screen flex items-center justify-center bg-linear-to-r from-[#77C3FD] via-[#6D7CFD] to-[#B3AAFC]">
             <form onSubmit={handleSubmit((user) => {

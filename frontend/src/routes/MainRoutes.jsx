@@ -1,15 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import Products from '../pages/Products';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
-import CreateProduct from '../pages/admin/CreateProduct';
-import ProductDetails from '../pages/admin/ProductDetails';
-import UserProfile from '../pages/user/UserProfile';
-import PageNotFound from '../pages/PageNotFound';
-import Cart from '../pages/Cart';
-import AuthWrapper from './AuthWrapper';
-import UnauthWrapper from './UnauthWrapper';
-import RoleWrapper from './RoleWrapper';
+const Login = lazy(() => import('../pages/Login'));
+const Register = lazy(() => import('../pages/Register'));
+const CreateProduct = lazy(() => import('../pages/admin/CreateProduct'));
+const ProductDetails = lazy(() => import('../pages/admin/ProductDetails'));
+const UserProfile = lazy(() => import('../pages/user/UserProfile'));
+const PageNotFound = lazy(() => import('../pages/PageNotFound'));
+const Cart = lazy(() => import('../pages/Cart'));
+const AuthWrapper = lazy(() => import('./AuthWrapper'));
+const UnauthWrapper = lazy(() => import('./UnauthWrapper'));
+const RoleWrapper = lazy(() => import('./RoleWrapper'));
 
 const MainRoutes = () => {
     return (

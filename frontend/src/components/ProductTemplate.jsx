@@ -16,7 +16,7 @@ const ProductTemplate = ({product, cart, user}) => {
                 navigate('/login');
             };
         }} className="bg-white h-115 rounded-3xl p-4 cursor-pointer [&:active:not(:has(button:active))]:scale-[0.97] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <img className="rounded-3xl w-full h-70 object-center bg-black/10" src={product.url} alt="" />
+            <img className="rounded-3xl w-full h-70 object-center bg-black/10" src={product.url} alt="No image found" loading="lazy" />
             <p className="text-xs mt-2"><span className="underline">Category</span> :- {product.category}</p>
             <h2 className="font-medium mt-1 leading-5 line-clamp-1">{product.title}</h2>
             <p className="h-10 mt-2 text-sm text-[#7D7D7D]">{product.description.split(/\s+/).slice(0, 12).join(" ") + " ...more"}</p>

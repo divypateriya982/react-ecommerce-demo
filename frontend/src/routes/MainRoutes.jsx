@@ -14,19 +14,25 @@ const RoleWrapper = lazy(() => import('./RoleWrapper'));
 
 const MainRoutes = () => {
     return (
-        <Routes>
-            <Route path='/' element={<Products />} />
+        <Suspense fallback={
+            <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+                <p className="text-xl font-medium">Loading...</p>
+            </div>
+        }>
+            <Routes>
+                <Route path='/' element={<Products />} />
 
-            <Route path='/login' element={<UnauthWrapper><Login /></UnauthWrapper>} />
-            <Route path='/register' element={<UnauthWrapper><Register /></UnauthWrapper>} />
+                <Route path='/login' element={<UnauthWrapper><Login /></UnauthWrapper>} />
+                <Route path='/register' element={<UnauthWrapper><Register /></UnauthWrapper>} />
 
-            <Route path='/settings' element={<AuthWrapper><UserProfile /></AuthWrapper>} />
-            <Route path='/admin/create-product' element={<RoleWrapper role="admin"><CreateProduct /></RoleWrapper>} />
-            <Route path='/product/:id' element={<AuthWrapper><ProductDetails /></AuthWrapper>} />
-            <Route path='/cart' element={<RoleWrapper role="customer"><Cart /></RoleWrapper>} />
+                <Route path='/settings' element={<AuthWrapper><UserProfile /></AuthWrapper>} />
+                <Route path='/admin/create-product' element={<RoleWrapper role="admin"><CreateProduct /></RoleWrapper>} />
+                <Route path='/product/:id' element={<AuthWrapper><ProductDetails /></AuthWrapper>} />
+                <Route path='/cart' element={<RoleWrapper role="customer"><Cart /></RoleWrapper>} />
 
-            <Route path='*' element={<PageNotFound />} />
-        </Routes>
+                <Route path='*' element={<PageNotFound />} />
+            </Routes>
+        </Suspense>
     )
 }
 

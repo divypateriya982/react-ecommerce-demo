@@ -25,7 +25,7 @@ const Products = () => {
                 </div>
             ) : (
                 <div className="bg-[#FEE3C8] h-screen flex justify-center items-end">
-                    <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">No products!</p>
+                    <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">No products yet!</p>
                     <PaginationTemplate />
                 </div>
             )}

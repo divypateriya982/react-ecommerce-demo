@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Products from '../pages/Products';
+const Products = lazy(() => import('../pages/Products'));
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
 const CreateProduct = lazy(() => import('../pages/admin/CreateProduct'));

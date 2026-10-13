@@ -8,9 +8,9 @@ const ProductDetails = lazy(() => import('../pages/admin/ProductDetails'));
 const UserProfile = lazy(() => import('../pages/user/UserProfile'));
 const PageNotFound = lazy(() => import('../pages/PageNotFound'));
 const Cart = lazy(() => import('../pages/Cart'));
-const AuthWrapper = lazy(() => import('./AuthWrapper'));
-const UnauthWrapper = lazy(() => import('./UnauthWrapper'));
-const RoleWrapper = lazy(() => import('./RoleWrapper'));
+import AuthWrapper from './AuthWrapper';
+import UnauthWrapper from './UnauthWrapper';
+import RoleWrapper from './RoleWrapper';
 
 const MainRoutes = () => {
     return (

@@ -8,15 +8,16 @@ import { asyncLoadCart } from './store/actions/cartActions';
 const App = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userReducer.user);
-  const { currentPage } = useSelector((state) => state.productReducer);
-  
+  const currentPage = useSelector((state) => state.productReducer.products.currentPage);
+
+  console.log("App")
   useEffect(() => {
     dispatch(asyncLoadCart());
   }, [user]);
 
   useEffect(() => {
     dispatch(asyncLoadProduct(currentPage));
-  }, [currentPage])
+  }, [currentPage]);
 
   return (
     <>

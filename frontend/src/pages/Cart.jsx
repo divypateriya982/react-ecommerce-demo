@@ -1,10 +1,19 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartTemplate from "../components/CartTemplate";
 import CartSummaryTemplate from "../components/CartSummaryTemplate";
+// import { asyncLoadCart } from "../store/actions/cartActions";
+// import { useEffect } from "react";
 
 const Cart = () => {
 
+    // const dispatch = useDispatch();
+
     const carts = useSelector((state) => state.cartReducer.carts);
+    // const user = useSelector((state) => state.userReducer.user);
+
+    // useEffect(() => {
+    //     dispatch(asyncLoadCart());
+    // }, [user]);
 
     console.log('Cart rendering...');
     return (

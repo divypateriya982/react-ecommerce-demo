@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const asyncLoadProduct = (currentPage) => async (dispatch) => {
     try {
         const { data } = await axios.get(`/products?_page=${currentPage}&_per_page=8`);
-        await dispatch(loadProduct({ products: data.data, totalPages: data.pages, currentPage }));
+        await dispatch(loadProduct({ productsData: data.data, totalPages: data.pages, currentPage }));
     } catch (error) {
         console.error(error);
     }

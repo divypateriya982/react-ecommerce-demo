@@ -5,7 +5,7 @@ const ProductDetailsTemplate = ({ product, id, user }) => {
 
     const dispatch = useDispatch();
 
-    const { carts } = useSelector((state) => state.cartReducer);
+    const carts = useSelector((state) => state.cartReducer.carts);
     const cart = carts.find((cart) => cart.productId === id);
 
     console.log('ProductDetails template rendering...');

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import { memo } from 'react';
 
 const Navbar = () => {
     const user = useSelector((state) => state.userReducer.user);
@@ -12,16 +13,16 @@ const Navbar = () => {
                 {user?.isAdmin ? (
                     <NavLink to={'/admin/create-product'} className={({ isActive }) => isActive ? 'text-pink-600' : ''}>Create Product</NavLink>
                 ) : (
-                    <NavLink to={'/cart'} className={({isActive}) => isActive ? 'text-pink-600' : ''}>Cart</NavLink>
+                    <NavLink to={'/cart'} className={({ isActive }) => isActive ? 'text-pink-600' : ''}>Cart</NavLink>
                 )}
-                
-                <NavLink to={'/settings'} className={({isActive}) => isActive ? 'text-pink-600' : ''}>Settings</NavLink>
+
+                <NavLink to={'/settings'} className={({ isActive }) => isActive ? 'text-pink-600' : ''}>Settings</NavLink>
             </> : <>
                 <NavLink to={'/login'} className={({ isActive }) => isActive ? 'text-pink-600' : ''}>Login</NavLink>
             </>}
-            
+
         </div>
     )
 }
 
-export default Navbar
+export default memo(Navbar)

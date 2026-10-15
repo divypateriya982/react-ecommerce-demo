@@ -9,7 +9,7 @@ const UpdateProductFormTemplate = ({ product, id }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const currentPage = useSelector((state) => state.productReducer.currentPage);
+    const { currentPage } = useSelector((state) => state.productReducer.products);
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {
             url: product?.url,

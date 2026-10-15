@@ -11,6 +11,7 @@ const Cart = lazy(() => import('../pages/Cart'));
 import AuthWrapper from './AuthWrapper';
 import UnauthWrapper from './UnauthWrapper';
 import RoleWrapper from './RoleWrapper';
+import { memo } from 'react'
 
 const MainRoutes = () => {
     return (

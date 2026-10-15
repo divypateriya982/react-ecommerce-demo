@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { asyncCreateCart, asyncDeleteCart } from "../store/actions/cartActions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { memo } from "react";
 
-const ProductTemplate = ({product, cart, user}) => {
+const ProductTemplate = ({ product }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    const user = useSelector((state) => state.userReducer.user);
+    const carts = useSelector((state) => state.cartReducer.carts);
+    const cart = carts.find((cart) => cart.productId === product.id && cart.userId === user?.id);
 
     console.log('Product template rendering...');
     return (

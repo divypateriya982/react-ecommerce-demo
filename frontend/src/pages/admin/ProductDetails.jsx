@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "../../api/axiosConfig";
 import UpdateProductFormTemplate from "../../components/UpdateProductFormTemplate";
 import ProductDetailsTemplate from "../../components/ProductDetailsTemplate";

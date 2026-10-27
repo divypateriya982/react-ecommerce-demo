@@ -10,15 +10,15 @@ const App = () => {
   const user = useSelector((state) => state.userReducer.user);
   const currentPage = useSelector((state) => state.productReducer.products.currentPage);
 
-  console.log("App")
   useEffect(() => {
     dispatch(asyncLoadCart());
   }, [user]);
-
+  
   useEffect(() => {
     dispatch(asyncLoadProduct(currentPage));
-  }, [currentPage]);
-
+  }, []);
+  
+  console.log("App")
   return (
     <>
       <Navbar />

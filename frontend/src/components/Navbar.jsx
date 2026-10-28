@@ -62,7 +62,7 @@ const Navbar = () => {
                                     <NavLink to="/admin/create-product" className={navLinkClass}>
                                         <i className="ri-add-circle-line text-base text-indigo-500"></i>
                                         <span>Create Product</span>
-                                        <span className="ml-1 text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
+                                        <span className="ml-0 text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
                                             Admin
                                         </span>
                                     </NavLink>

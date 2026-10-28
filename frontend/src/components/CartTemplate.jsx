@@ -1,43 +1,87 @@
 import { useDispatch } from "react-redux";
 import { asyncDeleteCart, asyncUpdateCart } from "../store/actions/cartActions";
+import { memo } from "react";
 
 const CartTemplate = ({ cart }) => {
-
     const dispatch = useDispatch();
 
-    console.log('Cart template rendering...');
+    console.log("Cart template rendering...");
+
     return (
-        <div className="border border-gray-600 rounded-xl p-4 bg-gray-800 flex flex-col  gap-4 md:gap-8 lg:gap-4 xl:gap-10 md:flex-row md:items-center">
-            <img className="h-25 w-25 border border-gray-300 rounded-xl p-1 bg-white/80" src={cart.url} alt="" />
-            <div className="flex min-w-0 flex-1 flex-col gap-3 md:flex-row-reverse md:items-center md:justify-between">
-                <div className="flex items-center justify-between md:gap-8 xl:gap-15">
-                    <div className="flex border rounded-xl border-gray-300 items-center text-white">
-                        <i onClick={() => {
+        <article className="bg-white rounded-2xl border border-zinc-200/90 shadow-xs p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 hover:border-zinc-300 transition-all">
+            {/* Left: Product Thumbnail & Details */}
+            <div className="flex items-center gap-4 sm:gap-5 min-w-0 flex-1">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-zinc-50 border border-zinc-100 p-2 flex items-center justify-center shrink-0 overflow-hidden">
+                    <img
+                        className="w-full h-full object-contain"
+                        src={cart.url}
+                        alt={cart.title || "Cart item"}
+                        loading="lazy"
+                    />
+                </div>
+                <div className="min-w-0 flex-1">
+                    <h2 className="text-sm sm:text-base font-semibold text-zinc-900 leading-snug truncate">
+                        {cart.title}
+                    </h2>
+                    <p className="text-xs text-zinc-500 mt-0.5">
+                        ${Number(cart.price).toFixed(2)} each
+                    </p>
+                    <button
+                        onClick={() => dispatch(asyncDeleteCart(cart.id))}
+                        className="inline-flex items-center gap-1 text-xs font-medium text-zinc-400 hover:text-rose-600 transition-colors cursor-pointer mt-2.5 active:scale-95"
+                    >
+                        <i className="ri-delete-bin-line text-sm"></i>
+                        <span>Remove</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Right: Quantity Stepper & Subtotal */}
+            <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-zinc-100">
+                {/* Quantity Stepper Control */}
+                <div className="inline-flex items-center border border-zinc-200 rounded-xl bg-zinc-50/70 p-0.5">
+                    <button
+                        type="button"
+                        onClick={() => {
                             if (cart.quantity > 1) {
                                 const copyCart = { ...cart };
                                 copyCart.quantity -= 1;
                                 dispatch(asyncUpdateCart(cart.id, copyCart));
+                            } else {
+                                dispatch(asyncDeleteCart(cart.id));
                             }
-                            else dispatch(asyncDeleteCart(cart.id));
-                        }} className="ri-subtract-line cursor-pointer px-2"></i>
-                        <hr className="h-6 border-l border-gray-300" />
-                        <h2 className="px-2">{cart.quantity}</h2>
-                        <hr className="h-6 border-l border-gray-300" />
-                        <i onClick={() => {
+                        }}
+                        className="w-8 h-8 flex items-center justify-center text-zinc-600 hover:text-zinc-900 hover:bg-white rounded-lg transition-colors cursor-pointer active:scale-95"
+                        aria-label="Decrease quantity"
+                    >
+                        <i className="ri-subtract-line text-sm font-semibold"></i>
+                    </button>
+                    <span className="w-9 text-center text-sm font-bold text-zinc-800 select-none">
+                        {cart.quantity}
+                    </span>
+                    <button
+                        type="button"
+                        onClick={() => {
                             const copyCart = { ...cart };
                             copyCart.quantity += 1;
                             dispatch(asyncUpdateCart(cart.id, copyCart));
-                        }} className="ri-add-line px-2 cursor-pointer"></i>
-                    </div>
-                    <h3 className="text-white text-lg font-medium">${(cart.quantity * cart.price).toFixed(2)}</h3>
+                        }}
+                        className="w-8 h-8 flex items-center justify-center text-zinc-600 hover:text-zinc-900 hover:bg-white rounded-lg transition-colors cursor-pointer active:scale-95"
+                        aria-label="Increase quantity"
+                    >
+                        <i className="ri-add-line text-sm font-semibold"></i>
+                    </button>
                 </div>
-                <div>
-                    <h2 className="text-white text-lg leading-6 wrap-break-word">{cart.title}</h2>
-                    <button onClick={() => dispatch(asyncDeleteCart(cart.id))} className="text-red-400 rounded-lg font-medium mt-3 cursor-pointer transition active:scale-[0.98] duration-200"><i className="ri-close-large-fill font-semibold mr-1"></i>Remove</button>
+
+                {/* Subtotal for Item */}
+                <div className="text-right sm:min-w-24">
+                    <span className="block text-base sm:text-lg font-bold text-zinc-900">
+                        ${(cart.quantity * cart.price).toFixed(2)}
+                    </span>
                 </div>
             </div>
-        </div >
-    )
-}
+        </article>
+    );
+};
 
-export default CartTemplate
+export default memo(CartTemplate);

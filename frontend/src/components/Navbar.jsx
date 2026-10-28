@@ -62,7 +62,7 @@ const Navbar = () => {
                                     <NavLink to="/admin/create-product" className={navLinkClass}>
                                         <i className="ri-add-circle-line text-base text-indigo-500"></i>
                                         <span>Create Product</span>
-                                        <span className="ml-0 text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
+                                        <span className="ml-1 text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
                                             Admin
                                         </span>
                                     </NavLink>
@@ -92,11 +92,12 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center gap-3">
                         {user ? (
                             <Link
-                                to="/settings"
-                                className="flex items-center gap-2.5 pl-3 py-1.5 pr-2 rounded-full border border-zinc-200 bg-zinc-50/80 hover:bg-zinc-100 transition-all text-xs text-zinc-700"
+                                to="/profile"
+                                className="flex items-center gap-2.5 pl-3 py-1.5 pr-2 rounded-full border border-zinc-200 bg-zinc-50/80 hover:bg-zinc-100 transition-all text-xs text-zinc-700 group cursor-pointer"
+                                title="View & Edit Profile"
                             >
-                                <span className="font-medium text-zinc-800 max-w-28 truncate">
-                                    {user?.fullName || "Account"}
+                                <span className="font-medium text-zinc-800 max-w-28 truncate group-hover:text-indigo-600 transition-colors">
+                                    {user?.fullName || "Profile"}
                                 </span>
                                 <div className="w-7 h-7 rounded-full bg-indigo-600 text-white font-semibold flex items-center justify-center text-xs uppercase shadow-xs">
                                     {user?.fullName ? user.fullName[0] : <i className="ri-user-line"></i>}
@@ -204,8 +205,12 @@ const Navbar = () => {
                                 <i className="ri-arrow-right-s-line text-zinc-400"></i>
                             </NavLink>
 
-                            {/* User details strip in mobile menu */}
-                            <div className="pt-3 mt-2 border-t border-zinc-100 flex items-center justify-between px-3">
+                            {/* User details strip in mobile menu -> links to /profile */}
+                            <Link
+                                to="/profile"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="pt-3 mt-2 border-t border-zinc-100 flex items-center justify-between px-3 py-2 rounded-xl hover:bg-zinc-50 transition-colors"
+                            >
                                 <div className="flex items-center gap-2.5">
                                     <div className="w-8 h-8 rounded-full bg-indigo-600 text-white font-semibold flex items-center justify-center text-xs uppercase">
                                         {user?.fullName ? user.fullName[0] : <i className="ri-user-line"></i>}
@@ -215,11 +220,12 @@ const Navbar = () => {
                                             {user?.fullName}
                                         </p>
                                         <p className="text-xs text-zinc-400">
-                                            {user?.isAdmin ? "Administrator" : user?.email}
+                                            {user?.isAdmin ? "Administrator" : "View Profile"}
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                                <i className="ri-arrow-right-s-line text-zinc-400 text-lg"></i>
+                            </Link>
                         </>
                     ) : (
                         <div className="pt-3 mt-2 border-t border-zinc-100">

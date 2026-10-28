@@ -11,6 +11,7 @@ const CreateProduct = lazy(() => import("../pages/admin/CreateProduct"));
 const ProductDetails = lazy(() => import("../pages/admin/ProductDetails"));
 const UpdateProduct = lazy(() => import("../pages/admin/UpdateProduct"));
 const UserProfile = lazy(() => import("../pages/user/UserProfile"));
+const Settings = lazy(() => import("../pages/user/Settings"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
 const Cart = lazy(() => import("../pages/Cart"));
 
@@ -32,7 +33,9 @@ const MainRoutes = () => {
                 <Route path="/login" element={<UnauthWrapper><Login /></UnauthWrapper>} />
                 <Route path="/register" element={<UnauthWrapper><Register /></UnauthWrapper>} />
 
-                <Route path="/settings" element={<AuthWrapper><UserProfile /></AuthWrapper>} />
+                <Route path="/profile" element={<AuthWrapper><UserProfile /></AuthWrapper>} />
+                <Route path="/settings" element={<AuthWrapper><Settings /></AuthWrapper>} />
+
                 <Route path="/admin/create-product" element={<RoleWrapper role="admin"><CreateProduct /></RoleWrapper>} />
                 <Route path="/admin/update-product/:id" element={<RoleWrapper role="admin"><UpdateProduct /></RoleWrapper>} />
                 <Route path="/product/:id" element={<AuthWrapper><ProductDetails /></AuthWrapper>} />
